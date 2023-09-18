@@ -254,8 +254,8 @@ public class Simulator {
 		    FileOutputStream bfile = new FileOutputStream(objectProgramFile);
 		 
 		    int firstCodeAddress = ParsedProgram.firstCodeAddress;
-			bfile.write(firstCodeAddress);
-		    // bfile.write(ByteBuffer.allocate(4).putInt(firstCodeAddress).array());
+
+		    bfile.write(ByteBuffer.allocate(4).putInt(firstCodeAddress).array());
 
 
 			ArrayList<Integer> dataArray = ParsedProgram.data;
